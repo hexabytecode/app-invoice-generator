@@ -1,0 +1,36 @@
+{
+  "buyer_name": "John Doe",
+  "buyer_homeAddress": "Ram Mandir, Ayodhya, 200001",
+  "buyer_workAddress": "9th Floor, Platinum Technopark, Vashi, 400001",
+  "buyer_gst": "21AKKKU1122J",
+  "buyer_contact": 987654321,
+  "transport_name": "Bhaya Transportation, Vadala, 400101",
+  "transport_gst": "21AKRUT1155J",
+  "invoice_no": "15/PCW_65/123",
+  "invoice_date": "11/11/1980",
+  "items": [
+    {
+      "item_no": 1,
+      "item_name": "item1",
+      "item_hsn": 123456,
+      "item_qty": 1,
+      "item_unitWeight": 200,
+      "item_unitRate": 200,
+      "item_cost": 5000
+    },
+    {
+      "item_no": 2,
+      "item_name": "item2",
+      "item_hsn": 198765,
+      "item_qty": 5,
+      "item_unitWeight": 200,
+      "item_unitRate": 500,
+      "item_cost": 100000
+    }
+  ],
+  "subtotal_cost": 105000,
+  "cgst_cost": 7000,
+  "sgst_cost": 7000,
+  "total_cost": 119000,
+  "totalCost_toWords": "One Lakh Nineteen Thousand Rupee Only"
+}
