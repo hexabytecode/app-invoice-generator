@@ -9,7 +9,7 @@ const path = require("path");
 
 // Load the docx file as binary content
 const content = fs.readFileSync(
-  path.resolve(__dirname, "invoice_template.docx"),
+  path.resolve(__dirname, "../assets/invoice_template.docx"),
   "binary"
 );
 
@@ -48,7 +48,10 @@ const buf = doc.getZip().generate({
 });
 
 // Write the Node.js Buffer to a file
-fs.writeFileSync(path.resolve(__dirname, "generated_invoice.docx"), buf);
+fs.writeFileSync(
+  path.resolve(__dirname, "../assets/generated_invoice.docx"),
+  buf
+);
 // Instead of writing it to a file, you could also
 // let the user download it, store it in a database,
 // on AWS S3, ...
