@@ -23,13 +23,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.helloWorld = void 0;
-const https_1 = require("firebase-functions/v2/https");
-const admin = __importStar(require("firebase-admin"));
-// import { logger } from "firebase-functions";
-// Initialize Firebase Admin SDK
-admin.initializeApp();
-exports.helloWorld = (0, https_1.onRequest)((req, res) => {
-    //   logger.info("Hello from Firebase Functions!", { structuredData: true });
-    res.send("Hello, world!");
+exports.transporter = void 0;
+const nodemailer = __importStar(require("nodemailer"));
+exports.transporter = nodemailer.createTransport({
+    service: "gmail", // or use your email service
+    auth: {
+        user: "your-email@gmail.com", // Replace with your email
+        pass: "your-email-password", // Replace with your email password or App password
+    },
 });

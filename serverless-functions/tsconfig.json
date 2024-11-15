@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "functions/lib"
+    "outDir": "functions/src/lib"
   },
   "include": ["functions/**/*.ts"],
   "exclude": ["node_modules", "functions/lib"]
