@@ -1,9 +1,19 @@
 import * as nodemailer from "nodemailer";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const transporter = nodemailer.createTransport({
-  service: "gmail", // or use your email service
+  service: "gmail",
   auth: {
-    user: "your-email@gmail.com", // Replace with your email
-    pass: "your-email-password", // Replace with your email password or App password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD,
   },
+});
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("Error configuring email transporter:", error);
+  } else {
+    console.log("Email transporter configured successfully.");
+  }
 });
